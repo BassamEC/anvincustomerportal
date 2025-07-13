@@ -15,4 +15,10 @@ A Streamlit web application for customers to view their orders and look up produ
 1. Clone the repository:
    ```bash
    git clone https://github.com/BassamEC/anvincustomerportal.git
-   cd customer-portal
+3. Install requirements.txt
+   ```bash
+   pip install requirements.txt
+
+4.Run the app
+   ```bash
+   streampit run app.py
