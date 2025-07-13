@@ -21,4 +21,4 @@ A Streamlit web application for customers to view their orders and look up produ
 
 4.Run the app
    ```bash
-   streampit run app.py
+   streamlit run app.py
