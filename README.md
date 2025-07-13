@@ -14,5 +14,5 @@ A Streamlit web application for customers to view their orders and look up produ
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/customer-portal.git
+   git clone [URL](https://github.com/BassamEC/anvincustomerportal.git)
    cd customer-portal
