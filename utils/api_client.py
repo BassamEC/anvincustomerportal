@@ -19,12 +19,9 @@ def get_headers():
 def test_api_connection():
     try:
         url = f"{get_base_url()}/health"
-        st.write(f"Testing connection to: {url}")  # Debug line
         response = requests.get(url, headers=get_headers(), timeout=10)
-        st.write(f"Health check response: {response.status_code}")  # Debug line
         return response.status_code == 200
     except Exception as e:
-        st.write(f"Connection test failed: {e}")  # Debug line
         return False
 
 def get_orders(customer_id: str):
@@ -35,15 +32,7 @@ def get_orders(customer_id: str):
         params = {"customer_id": customer_id}
         url = f"{base_url}/orders"
         
-        # Debug information
-        st.write(f"Requesting: {url}")
-        st.write(f"Headers: {headers}")
-        st.write(f"Params: {params}")
-        
         response = requests.get(url, headers=headers, params=params, timeout=10)
-        
-        st.write(f"Response status: {response.status_code}")
-        st.write(f"Response text: {response.text}")
         
         if response.status_code == 200:
             data = response.json()
@@ -62,7 +51,6 @@ def get_orders(customer_id: str):
 def get_customer(customer_id):
     try:
         url = f"{get_base_url()}/customers/{customer_id}"
-        st.write(f"Requesting customer: {url}")  # Debug line
         
         response = requests.get(url, headers=get_headers(), timeout=10)
         
@@ -78,7 +66,6 @@ def get_customer(customer_id):
 def get_product_supplier(product_id):
     try:
         url = f"{get_base_url()}/products/{product_id}/supplier"
-        st.write(f"Requesting supplier: {url}")  # Debug line
         
         response = requests.get(url, headers=get_headers(), timeout=10)
         
